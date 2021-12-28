@@ -1,0 +1,20 @@
+# permissions for end users to view rbtresources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rbtresource-viewer-role
+rules:
+- apiGroups:
+  - rbtgroup.rbt.com
+  resources:
+  - rbtresources
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - rbtgroup.rbt.com
+  resources:
+  - rbtresources/status
+  verbs:
+  - get

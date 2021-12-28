@@ -1,0 +1,24 @@
+# permissions for end users to edit rbtresources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rbtresource-editor-role
+rules:
+- apiGroups:
+  - rbtgroup.rbt.com
+  resources:
+  - rbtresources
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rbtgroup.rbt.com
+  resources:
+  - rbtresources/status
+  verbs:
+  - get

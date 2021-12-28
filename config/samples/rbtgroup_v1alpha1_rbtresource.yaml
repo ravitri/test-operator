@@ -1,0 +1,6 @@
+apiVersion: rbtgroup.rbt.com/v1alpha1
+kind: RBTResource
+metadata:
+  name: rbtresource-sample
+spec:
+  # Add fields here
